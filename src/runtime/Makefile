@@ -682,7 +682,7 @@ check: check-go-static
 test: go-test
 
 go-test: $(GENERATED_FILES)
-	go test -v -mod=vendor ./...
+	$(QUIET_TEST)../../ci/go-test.sh
 
 check-go-static:
 	$(QUIET_CHECK).ci/static-checks.sh
